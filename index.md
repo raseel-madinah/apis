@@ -4,13 +4,23 @@ You can use the [editor on GitHub](https://github.com/raseel-public/apis/edit/gh
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### The 9 main rules
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+Let talk about the main 9 best practises about rest apis developement.
+# Rule 1: Using Json as data format
+Example:
 ```markdown
-/books/{id}
+{
+  "data": [
+    {
+      "id": 121,
+      "title": "Rest APIs for dummies"
+    }
+  ]
+}
 ```
+# Rule 2: Using Nouns
+To be continued.....
 
 ```markdown
 Syntax highlighted code block
