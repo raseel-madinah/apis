@@ -88,6 +88,47 @@ There are 71 distinct HTTP status codes that we can rely on, but sometimes it is
 }
 ```
 
+# Rule 6: Filtering, sorting, paging, and field selection
+The collections are often enormous and managing them is a great challenge. It is not efficient to get a full list when retrieving only the requested data. Therefore, we need ways to filter items. REST API provides 4 types of filtering options.
+
+**The REST API filtering options include:**
+
+### Filtering
+Using filtering we can narrow down the received results that satisfy the required conditions by specific parameters.
+
+### Sorting
+The received results can be sorted ascending or descending by a chosen parameter.
+
+### Paging
+The received results can be limited by a required number using `limit` query parameter.
+
+### Field selection
+Using field selection you can request only specific parts (fields) of the received objects by the `field` query parameter
+
+_They are all used by adding a query parameter to the endpoint that is being called_
+
+**Filtering:**
+```markdown
+GET /employees?projects=smart_parking
+```
+
+**Sorting:**
+```markdown
+GET /employees?sort=start_date:asc
+```
+
+**Paging:**
+```markdown
+GET /employees?limit=10
+```
+
+**Field selection:**
+```markdown
+GET /employees?fields=email,phone_num (for a full list of employees)
+```
+
+
+
 
 
 
