@@ -69,6 +69,26 @@ GET /departments/{id}/employees -employees list that belongs to a specific depar
 GET /departments/{id}/employees/{id} -specific employee of a specific department
 ```
 
+# Rule 5: Error Handling
+To eliminate confusion for API users when an error occurs, the errors should be handled and returns HTTP codes that provide enough information to know what has happened and possibly why.
+There are 71 distinct HTTP status codes that we can rely on, but sometimes it is better to provide a more detailed explanation using specific error messages and internal code references.
+
+**The ideal error message would consist of:**
+- HTTP Status Code
+- Code ID, which is an internal reference
+- Clear and short messages briefly describing the problem
+
+**Example:**
+**Example:**
+```markdown
+{
+  "status": 400,
+  "message": 'Employee already exists',
+  "code" "10212"
+}
+```
+
+
 
 
 ```markdown
