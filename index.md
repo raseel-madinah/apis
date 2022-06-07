@@ -1,14 +1,17 @@
 ## Welcome to Raseel API development guidelines
 
-You can use the [editor on GitHub](https://github.com/raseel-public/apis/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This document illustrates most of the rules to follow by backend developers and integrators to write the APIs.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Terminologies
+- **Resource** is an object with associated data, represents something, and the set of methods can operate on it.
+- **Collections** are set of resources.
 
 ### The 9 main rules
 
-Let talk about the main 9 best practises about rest apis developement.
-# Rule 1: Using Json as data format
-Example:
+Let's talk about the main 9 best practises about REST APIs developement.
+# Rule 1: Using Json
+JSON is used as the data format for both the payload and the response.
+**Example:**
 ```markdown
 {
   "data": [
@@ -20,7 +23,19 @@ Example:
 }
 ```
 # Rule 2: Using Nouns
-To be continued.....
+**Nouns** are used for naming the resources. The actions on the resources are defined by a few standard HTTP methods such as (GET, PUT, POST, PATCH, and DELETE).
+Here are a few examples to show how the endpoints should look like:
+
+
+```markdown
+GET  /books    - Returns a list of books
+GET  /books/{id}    - Returns a specific book
+POST  /books    - Create a new book
+PUT  /books/{id}    - Updates a specific book
+PATCH  /books/{id}    - Partial update a specific book
+DELETE  /books/{id}    - Deletes a specific book
+```
+
 
 ```markdown
 Syntax highlighted code block
