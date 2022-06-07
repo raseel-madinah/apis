@@ -127,35 +127,23 @@ GET /employees?limit=10
 GET /employees?fields=email,phone_num (for a full list of employees)
 ```
 
-
-
-
-
+# Rule 7: Versioning
+Making any changes to the APIs maybe cause breaking the clients and this is the main reason for the need to have different APIs versions. The more often used route to implement the versioning is in the endpoint URI.  
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+https://raseel-public.github.io/apis/v1/
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+# Rule 8: API Documentation
+The API documentation needs to be readable enough for both technical and non-technical people to understand it. Where these documents provide information about the used endpoints and methods, examples of request and response, authorization details, and so on.
 
-### Jekyll Themes
+Here in **Raseel** we have a standard template for API documents that we rely on.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/raseel-public/apis/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+# Rule 9: Using SSL/TLS
+Using SSL/TLS to encrypt the communication between client and server is a must. The APIs should be secured and the sending and receiving data should not be compromised.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+
+
+
