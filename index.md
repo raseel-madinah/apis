@@ -58,6 +58,7 @@ POST /book
 
 # Rule 4: Use resource nesting to show hierarchy
 Resources sometimes have some kind of functional hierarchy or are related to each other. Nesting to one level is one of the best practices to group resources that are logically coherent.
+
 For example in the Employee Management System, we have ‘departments’ and ‘employees’. Employees always belong to some department, therefore we may have the following endpoints structure:
 
 
