@@ -103,9 +103,11 @@ The received results can be sorted ascending or descending by a chosen parameter
 The received results can be limited by a required number using `limit` query parameter.
 
 ### Field selection
-Using field selection you can request only specific parts (fields) of the received objects by the `field` query parameter
+Using field selection you can request only specific parts (fields) of the received objects by the `field` query parameter.
+
 
 _They are all used by adding a query parameter to the endpoint that is being called_
+
 
 **Filtering:**
 ```markdown
