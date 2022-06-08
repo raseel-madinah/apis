@@ -96,35 +96,34 @@ The collections are often enormous and managing them is a great challenge. It is
 ### Filtering
 Using filtering we can narrow down the received results that satisfy the required conditions by specific parameters.
 
+```markdown
+GET /employees?projects=value
+```
+
+**One way to encode operators and do range-based filtering is the use of square brackets `[]` on the key name. We can have as many operators as needed such as `lte`, `gte`, `before`, and `after`. **
+
+```markdown
+GET /employees?salary[gte]=value&salary[lte]=value
+GET /employees?start_date[before]=value&start_date[after]=value
+```
+
 ### Sorting
 The received results can be sorted ascending or descending by a chosen parameter.
 
-### Paging
-The received results can be limited by a required number using `limit` query parameter.
-
-### Field selection
-Using field selection you can request only specific parts (fields) of the received objects by the `field` query parameter.
-
-
-_They are all used by adding a query parameter to the endpoint that is being called_
-
-
-**Filtering:**
-```markdown
-GET /employees?projects=smart_parking
-```
-
-**Sorting:**
 ```markdown
 GET /employees?sort=start_date:asc
 ```
 
-**Paging:**
+### Paging
+The received results can be limited by a required number using `limit` query parameter.
+
 ```markdown
 GET /employees?limit=10
 ```
 
-**Field selection:**
+### Field selection
+Using field selection you can request only specific parts (fields) of the received objects by the `field` query parameter.
+
 ```markdown
 GET /employees?fields=email,phone_num (for a full list of employees)
 ```
@@ -139,13 +138,8 @@ https://raseel-public.github.io/apis/v1/
 # Rule 8: API Documentation
 The API documentation needs to be readable enough for both technical and non-technical people to understand it. Where these documents provide information about the used endpoints and methods, examples of request and response, authorization details, and so on.
 
-Here in **Raseel** we have a standard template for API documents that we rely on.
-
-
 # Rule 9: Using SSL/TLS
 Using SSL/TLS to encrypt the communication between client and server is a must. The APIs should be secured and the sending and receiving data should not be compromised.
-
-
 
 
 
