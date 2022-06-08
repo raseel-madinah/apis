@@ -100,7 +100,7 @@ Using filtering we can narrow down the received results that satisfy the require
 GET /employees?projects=value
 ```
 
-**One way to encode operators and do range-based filtering is the use of square brackets `[]` on the key name. We can have as many operators as needed such as `lte`, `gte`, `before`, and `after`. **
+##### One way to encode operators and do range-based filtering is the use of square brackets `[]` on the key name. We can have as many operators as needed such as `lte`, `gte`, `before`, and `after`.
 
 ```markdown
 GET /employees?salary[gte]=value&salary[lte]=value
