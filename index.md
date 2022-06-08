@@ -29,12 +29,12 @@ JSON format is the standard for data transmission for both the payload and the r
 Here are some examples to show how the endpoints should look like:
 
 ```markdown
-GET /books  -Returns a list of books
-GET /books/{id}  -Returns a specific book
-POST /books  -Creates a new book
-PUT /books/{id}  -Updates a specific book
-PATCH /books/{id}  -Partial updates a specific book
-DELETE /books/{id}  -Deletes a specific book
+GET /employees  -Returns a list of employees
+GET /employees/{id}  -Returns a specific employee
+POST /employees  -Creates a new employee
+PUT /employees/{id}  -Updates a specific employee
+PATCH /employees/{id}  -Partial updates a specific employee
+DELETE /employees/{id}  -Deletes a specific employee
 ```
 
 # Rule 3: Name the collections using Plural Nouns
@@ -43,17 +43,17 @@ For the collections in REST API development use plural nouns.
 **Do's**
 
 ```markdown
-GET /books
-GET /books/{id}
-POST /books
+GET /employees
+GET /employees/{id}
+POST /employees
 ```
 
 **Don'ts**
 
 ```markdown
-GET /book
-GET /book/{id}
-POST /book
+GET /employee
+GET /employee/{id}
+POST /employee
 ```
 
 # Rule 4: Use resource nesting to show hierarchy
