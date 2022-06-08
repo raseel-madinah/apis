@@ -100,7 +100,7 @@ Using filtering we can narrow down the received results that satisfy the require
 GET /employees?projects=value
 ```
 
-##### One way to encode operators and do range-based filtering is the use of square brackets `[]` on the key name. We can have as many operators as needed such as `lte`, `gte`, `before`, and `after`.
+ One way to encode operators and do range-based filtering is the use of square brackets `[]` on the key name. We can have as many operators as needed such as `lte`, `gte`, `before`, and `after`.
 
 ```markdown
 GET /employees?salary[gte]=value&salary[lte]=value
@@ -115,10 +115,10 @@ GET /employees?sort=start_date:asc
 ```
 
 ### Paging
-The received results can be limited by a required number using `limit` query parameter.
+Pagination is useful when the dataset is huge. By using `limit` query parameter the maximum number of items that are returned for a single request can be controlled. And `offset` parameter can control the starting point within the results.
 
 ```markdown
-GET /employees?limit=10
+GET /employees?limit=10&offset=0
 ```
 
 ### Field selection
@@ -136,12 +136,15 @@ https://raseel-public.github.io/apis/v1/
 ```
 
 # Rule 8: API Documentation
-The API documentation needs to be readable enough for both technical and non-technical people to understand it. Where these documents provide information about the used endpoints and methods, examples of request and response, authorization details, and so on.
+The API documentation needs to be readable enough for both technical and non-technical people to understand it. Where these documents provide information about the used endpoints and methods, examples of request and response, authorization details, and so on. Besides the API documentation, the Postman collections are required.
+
 
 # Rule 9: Using SSL/TLS
 Using SSL/TLS to encrypt the communication between client and server is a must. The APIs should be secured and the sending and receiving data should not be compromised.
 
-
+# Rule 10: Fiware-compatible system
+Raseel platform is powered by Fiware and we rely on NGSI version 2 API.  
+Have a look at [FIWARE NGSI APIv2 Walkthrough](https://fiware-orion.readthedocs.io/en/1.4.0/user/walkthrough_apiv2/index.html)
 
 
 
