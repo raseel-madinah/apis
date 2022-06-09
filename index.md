@@ -18,7 +18,7 @@ JSON format is the standard for data transmission for both the payload and the r
   "data": [
     {
       "id": 121,
-      "title": "Rest APIs for dummies"
+      "name": "John Smith"
     }
   ]
 }
